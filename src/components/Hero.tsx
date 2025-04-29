@@ -32,22 +32,17 @@ const Hero = () => {
             >
               Browse Food Items
             </a>
-            <a 
-              href="#about" 
-              className="px-6 py-3 bg-white text-instocks-dark border border-gray-200 rounded-lg hover:bg-gray-50 transition-all shadow-sm"
-            >
-              Learn More
-            </a>
           </div>
         </div>
         
         <div className="mt-20 opacity-0 animate-fade-in" style={{ animationDelay: '900ms' }}>
           <div className="relative w-full max-w-4xl mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="aspect-video bg-gradient-to-br from-instocks-teal/20 to-instocks-amber/20 flex items-center justify-center">
-              <div className="text-center p-8">
-                <h3 className="text-2xl font-semibold text-instocks-dark mb-2">Fresh Food Inventory Dashboard</h3>
-                <p className="text-instocks-gray">Track your grocery store's inventory in real-time</p>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1200&h=675&fit=crop" 
+                alt="Fresh oranges" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

@@ -35,8 +35,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div 
       className={cn(
-        "stagger-item group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg",
-        isHovered && "transform scale-[1.02]"
+        "stagger-item group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300",
+        isHovered && "shadow-lg"
       )}
       style={{ transitionDelay: `${index * 100}ms` }}
       onMouseEnter={() => setIsHovered(true)}
@@ -44,9 +44,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       <div className="relative h-48 overflow-hidden bg-gray-100">
         <img 
-          src={image || `https://source.unsplash.com/random/400x300?${category.toLowerCase()},product`} 
+          src={image || `https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=400&h=300&fit=crop`} 
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className={cn(
+            "w-full h-full object-cover transition-all duration-500",
+            isHovered && "brightness-105"
+          )}
         />
         
         <div className="absolute top-3 right-3">
