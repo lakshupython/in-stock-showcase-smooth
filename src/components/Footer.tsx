@@ -10,18 +10,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <h2 className="text-xl font-bold mb-4">
-              <span className="text-instocks-teal">In</span>
+              <span className="text-instocks-teal">Food</span>
               <span className="text-instocks-dark">Stocks</span>
             </h2>
             <p className="text-sm text-instocks-gray">
-              Modern inventory management and product showcase solution.
+              Modern grocery inventory management and product showcase solution.
             </p>
           </div>
           
           <div className="md:col-span-1">
-            <h3 className="font-semibold mb-4 text-instocks-dark">Categories</h3>
+            <h3 className="font-semibold mb-4 text-instocks-dark">Food Categories</h3>
             <ul className="space-y-2">
-              {['Electronics', 'Furniture', 'Clothing', 'Accessories'].map((category) => (
+              {['Fruits', 'Vegetables', 'Dairy', 'Bakery'].map((category) => (
                 <li key={category}>
                   <a 
                     href={`#${category.toLowerCase()}`}
@@ -35,9 +35,9 @@ const Footer = () => {
           </div>
           
           <div className="md:col-span-1">
-            <h3 className="font-semibold mb-4 text-instocks-dark">Company</h3>
+            <h3 className="font-semibold mb-4 text-instocks-dark">Store Info</h3>
             <ul className="space-y-2">
-              {['About', 'Contact', 'Privacy Policy', 'Terms of Service'].map((item) => (
+              {['Our Farm Partners', 'Delivery Areas', 'Store Hours', 'Nutrition Info'].map((item) => (
                 <li key={item}>
                   <a 
                     href="#"
@@ -51,9 +51,9 @@ const Footer = () => {
           </div>
           
           <div className="md:col-span-1">
-            <h3 className="font-semibold mb-4 text-instocks-dark">Stay Updated</h3>
+            <h3 className="font-semibold mb-4 text-instocks-dark">Fresh Updates</h3>
             <p className="text-sm text-instocks-gray mb-4">
-              Subscribe to our newsletter for inventory updates.
+              Subscribe for weekly fresh produce updates and special offers.
             </p>
             <div className="flex">
               <input
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-200 mt-10 pt-6 text-center text-sm text-instocks-gray">
-          <p>© {currentYear} InStocks. All rights reserved.</p>
+          <p>© {currentYear} FoodStocks. All rights reserved.</p>
         </div>
       </div>
     </footer>

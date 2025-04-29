@@ -5,39 +5,39 @@ import Hero from '@/components/Hero';
 import CategorySection from '@/components/CategorySection';
 import Footer from '@/components/Footer';
 
-// Mock data for our inventory items
+// Mock data for our food inventory items
 const inventoryData = {
-  electronics: [
-    { id: 1, name: "Wireless Headphones", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e", price: 129.99, stockCount: 23, category: "electronics" },
-    { id: 2, name: "Smart Watch", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30", price: 199.99, stockCount: 15, category: "electronics" },
-    { id: 3, name: "Bluetooth Speaker", image: "https://images.unsplash.com/photo-1589003077984-894e133dabab", price: 79.99, stockCount: 42, category: "electronics" },
-    { id: 4, name: "Laptop Pro 15\"", image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853", price: 1299.99, stockCount: 7, category: "electronics" },
-    { id: 5, name: "Wireless Earbuds", image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb", price: 89.99, stockCount: 31, category: "electronics" },
-    { id: 6, name: "Digital Camera", image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32", price: 449.99, stockCount: 0, category: "electronics" },
+  fruits: [
+    { id: 1, name: "Organic Apples", image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6", price: 3.99, stockCount: 45, category: "fruits" },
+    { id: 2, name: "Bananas", image: "https://images.unsplash.com/photo-1587132137056-bfbf0166836e", price: 1.99, stockCount: 68, category: "fruits" },
+    { id: 3, name: "Fresh Strawberries", image: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2", price: 4.99, stockCount: 32, category: "fruits" },
+    { id: 4, name: "Oranges", image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12", price: 2.99, stockCount: 29, category: "fruits" },
+    { id: 5, name: "Blueberries", image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e", price: 5.99, stockCount: 17, category: "fruits" },
+    { id: 6, name: "Avocados", image: "https://images.unsplash.com/photo-1601039641847-7857b994d704", price: 2.49, stockCount: 0, category: "fruits" },
   ],
-  furniture: [
-    { id: 7, name: "Ergonomic Chair", image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c", price: 249.99, stockCount: 12, category: "furniture" },
-    { id: 8, name: "Coffee Table", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88", price: 179.99, stockCount: 8, category: "furniture" },
-    { id: 9, name: "Bookshelf", image: "https://images.unsplash.com/photo-1593562970123-5135c9c2d2fb", price: 229.99, stockCount: 4, category: "furniture" },
-    { id: 10, name: "King Size Bed", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85", price: 899.99, stockCount: 3, category: "furniture" },
-    { id: 11, name: "Standing Desk", image: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd", price: 349.99, stockCount: 17, category: "furniture" },
-    { id: 12, name: "Dining Set", image: "https://images.unsplash.com/photo-1604578762246-41134e37f9cc", price: 799.99, stockCount: 2, category: "furniture" },
+  vegetables: [
+    { id: 7, name: "Fresh Spinach", image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb", price: 2.49, stockCount: 23, category: "vegetables" },
+    { id: 8, name: "Tomatoes", image: "https://images.unsplash.com/photo-1607305387299-a3d9611cd469", price: 1.99, stockCount: 42, category: "vegetables" },
+    { id: 9, name: "Carrots", image: "https://images.unsplash.com/photo-1447175008436-054170c2e979", price: 1.49, stockCount: 38, category: "vegetables" },
+    { id: 10, name: "Bell Peppers", image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83", price: 2.99, stockCount: 15, category: "vegetables" },
+    { id: 11, name: "Broccoli", image: "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc", price: 2.79, stockCount: 19, category: "vegetables" },
+    { id: 12, name: "Onions", image: "https://images.unsplash.com/photo-1618512496248-a3c25032447b", price: 1.29, stockCount: 0, category: "vegetables" },
   ],
-  clothing: [
-    { id: 13, name: "Men's T-Shirt", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab", price: 29.99, stockCount: 45, category: "clothing" },
-    { id: 14, name: "Women's Jeans", image: "https://images.unsplash.com/photo-1475178626620-a4d074967452", price: 59.99, stockCount: 38, category: "clothing" },
-    { id: 15, name: "Sweater", image: "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99", price: 49.99, stockCount: 27, category: "clothing" },
-    { id: 16, name: "Winter Coat", image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3", price: 129.99, stockCount: 13, category: "clothing" },
-    { id: 17, name: "Running Shoes", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff", price: 89.99, stockCount: 22, category: "clothing" },
-    { id: 18, name: "Summer Dress", image: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03", price: 69.99, stockCount: 0, category: "clothing" },
+  dairy: [
+    { id: 13, name: "Whole Milk", image: "https://images.unsplash.com/photo-1563636619-e9143da7973b", price: 3.49, stockCount: 27, category: "dairy" },
+    { id: 14, name: "Greek Yogurt", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777", price: 4.99, stockCount: 21, category: "dairy" },
+    { id: 15, name: "Cheddar Cheese", image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d", price: 6.99, stockCount: 14, category: "dairy" },
+    { id: 16, name: "Butter", image: "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d", price: 4.49, stockCount: 32, category: "dairy" },
+    { id: 17, name: "Eggs", image: "https://images.unsplash.com/photo-1598965402089-897c69f5bf60", price: 3.99, stockCount: 48, category: "dairy" },
+    { id: 18, name: "Sour Cream", image: "https://images.unsplash.com/photo-1638156775314-8ebe3fdaf85a", price: 2.99, stockCount: 0, category: "dairy" },
   ],
-  accessories: [
-    { id: 19, name: "Leather Belt", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62", price: 39.99, stockCount: 18, category: "accessories" },
-    { id: 20, name: "Sunglasses", image: "https://images.unsplash.com/photo-1577803645773-f96470509666", price: 79.99, stockCount: 24, category: "accessories" },
-    { id: 21, name: "Weekender Bag", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a45", price: 119.99, stockCount: 9, category: "accessories" },
-    { id: 22, name: "Watch", image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3", price: 199.99, stockCount: 11, category: "accessories" },
-    { id: 23, name: "Scarf", image: "https://images.unsplash.com/photo-1520903383915-70fce5c989c7", price: 24.99, stockCount: 29, category: "accessories" },
-    { id: 24, name: "Backpack", image: "https://images.unsplash.com/photo-1491637639811-60e2756cc1c7", price: 59.99, stockCount: 3, category: "accessories" },
+  bakery: [
+    { id: 19, name: "Sourdough Bread", image: "https://images.unsplash.com/photo-1585478259789-837b96f455a7", price: 4.99, stockCount: 12, category: "bakery" },
+    { id: 20, name: "Croissants", image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a", price: 3.49, stockCount: 23, category: "bakery" },
+    { id: 21, name: "Blueberry Muffins", image: "https://images.unsplash.com/photo-1607920591413-4ec007e70023", price: 2.99, stockCount: 18, category: "bakery" },
+    { id: 22, name: "Bagels", image: "https://images.unsplash.com/photo-1627308595260-3197f33bf252", price: 3.99, stockCount: 34, category: "bakery" },
+    { id: 23, name: "Cinnamon Rolls", image: "https://images.unsplash.com/photo-1586724332853-f3bbb942d519", price: 4.49, stockCount: 9, category: "bakery" },
+    { id: 24, name: "Whole Grain Bread", image: "https://images.unsplash.com/photo-1586444248890-2e3be0b2c7b1", price: 3.99, stockCount: 0, category: "bakery" },
   ]
 };
 
@@ -65,43 +65,43 @@ const Index = () => {
       <section id="about" className="py-20 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-instocks-dark mb-6">About InStocks</h2>
+            <h2 className="text-3xl font-bold text-instocks-dark mb-6">About FoodStocks</h2>
             <p className="text-instocks-gray">
-              InStocks is a modern inventory management system designed to help you showcase 
-              and track your store's available products. With intuitive design and smooth interactions, 
-              managing your inventory has never been easier.
+              FoodStocks is a modern inventory management system designed for grocery stores and food markets. 
+              Keep track of fresh produce, dairy products, bakery items, and more with our intuitive 
+              interface. Ensure your customers always have access to the freshest ingredients.
             </p>
           </div>
         </div>
       </section>
 
       <CategorySection 
-        id="electronics"
-        title="Electronics"
-        description="Explore our range of high-quality electronics, from headphones to laptops."
-        products={inventoryData.electronics}
+        id="fruits"
+        title="Fresh Fruits"
+        description="Explore our selection of fresh, seasonal fruits sourced from local farms."
+        products={inventoryData.fruits}
       />
       
       <CategorySection 
-        id="furniture"
-        title="Furniture"
-        description="Quality furniture pieces to enhance any space in your home or office."
-        products={inventoryData.furniture}
+        id="vegetables"
+        title="Fresh Vegetables"
+        description="Quality, farm-fresh vegetables to complete your healthy meals."
+        products={inventoryData.vegetables}
         reversed={true}
       />
       
       <CategorySection 
-        id="clothing"
-        title="Clothing"
-        description="Stylish clothing options for all seasons and occasions."
-        products={inventoryData.clothing}
+        id="dairy"
+        title="Dairy & Eggs"
+        description="Fresh dairy products and free-range eggs from trusted suppliers."
+        products={inventoryData.dairy}
       />
       
       <CategorySection 
-        id="accessories"
-        title="Accessories"
-        description="Complete your look with our range of carefully selected accessories."
-        products={inventoryData.accessories}
+        id="bakery"
+        title="Bakery Items"
+        description="Freshly baked breads and treats made daily in our bakery."
+        products={inventoryData.bakery}
         reversed={true}
       />
       

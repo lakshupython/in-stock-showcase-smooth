@@ -26,31 +26,10 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold text-instocks-dark">
-            <span className="text-instocks-teal">In</span>
+            <span className="text-instocks-teal">Food</span>
             <span>Stocks</span>
           </h1>
         </div>
-        
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            {['Home', 'Electronics', 'Furniture', 'Clothing', 'Accessories'].map((item) => (
-              <li key={item}>
-                <a 
-                  href={`#${item.toLowerCase()}`}
-                  className="text-instocks-dark hover:text-instocks-teal transition-colors duration-200"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        
-        <button className="md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </div>
     </header>
   );
