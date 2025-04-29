@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:col-span-1">
             <h2 className="text-xl font-bold mb-4">
-              <span className="text-instocks-teal">Food</span>
-              <span className="text-instocks-dark">Stocks</span>
+              <span className="text-instocks-teal">In</span>
+              <span className="text-instocks-dark">Stock</span>
             </h2>
             <p className="text-sm text-instocks-gray">
               Modern grocery inventory management and product showcase solution.
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-200 mt-10 pt-6 text-center text-sm text-instocks-gray">
-          <p>© {currentYear} FoodStocks. All rights reserved.</p>
+          <p>© {currentYear} InStock. All rights reserved.</p>
         </div>
       </div>
     </footer>

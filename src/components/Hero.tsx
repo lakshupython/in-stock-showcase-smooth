@@ -18,8 +18,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h1 className="hero-title text-4xl md:text-6xl font-bold text-instocks-dark opacity-0">
-            Fresh Food Inventory with <span className="text-instocks-teal">Food</span>
-            <span>Stocks</span>
+            Fresh Food Inventory with <span className="text-instocks-teal">In</span>
+            <span>Stock</span>
           </h1>
           <p className="hero-subtitle text-lg md:text-xl text-instocks-gray opacity-0 delay-300">
             A modern way to track and showcase your grocery store's available products.

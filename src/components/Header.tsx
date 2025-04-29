@@ -26,8 +26,8 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold text-instocks-dark">
-            <span className="text-instocks-teal">Food</span>
-            <span>Stocks</span>
+            <span className="text-instocks-teal">In</span>
+            <span>Stock</span>
           </h1>
         </div>
       </div>

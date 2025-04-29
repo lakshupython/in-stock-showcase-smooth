@@ -32,6 +32,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
   
   const stockStatus = getStockStatus();
   
+  // Fix for images - ensure they have the right path format
+  const getImageUrl = (url: string) => {
+    if (!url) return "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=400&h=300&fit=crop";
+    if (url.includes("?")) return url;
+    return `${url}?q=80&w=400&h=300&fit=crop`;
+  };
+  
   return (
     <div 
       className={cn(
@@ -44,7 +51,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       <div className="relative h-48 overflow-hidden bg-gray-100">
         <img 
-          src={image || `https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=400&h=300&fit=crop`} 
+          src={getImageUrl(image)} 
           alt={name}
           className={cn(
             "w-full h-full object-cover transition-all duration-500",
